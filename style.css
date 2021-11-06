@@ -1,0 +1,67 @@
+body {
+    float: left;
+    left: 40%;
+    position: fixed;
+}
+#blog_name {
+    font-weight: normal;
+    font-size: 48px;
+    padding-bottom: 5px;
+}
+#blog_name a {
+    color: inherit;
+    text-decoration: none;
+}
+#blog_desc {
+    font-weight: normal;
+    font-size: 20px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+#content {
+    float: left;
+    font-family: 'EB Garamond', serif;
+}
+#link {
+    padding-top: 5px;
+    margin: 0px;
+    font-size: 30px;
+    font-family: 'EB Garamond';
+}
+#post_name {
+    font-size: 30px;
+    padding-top: 5px;
+    padding-bottom: 0px;
+    margin: 0px;
+}
+#post_date {
+    padding-top: 5px;
+    font-size: 20px;
+    margin: 0px;
+    font-style: italic;
+}
+#generated p {
+   font-size: 20px;
+}
+p {
+    inline-size: 50%;
+    overflow-wrap: break-word;
+}
+
+#blog_name a:hover {
+    text-decoration: underline;
+}
+#post_name a {
+    color: inherit;
+    text-decoration: none;	     
+}
+
+#post_name:hover {
+    text-decoration: underline;
+}
+
+hr {
+    float: left;
+    width: 13%;
+    position: fixed;
+}
