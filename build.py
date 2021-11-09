@@ -26,6 +26,8 @@ heading = open('heading.html', 'r').read()
 posts = []
 
 for filename in glob.glob('*.md'):
+    md = MarkdownIt(renderer_cls=CustomRenderer)
+    
     ifile = open(filename, 'r')
     data = ifile.read()
     ifile.close()
@@ -48,7 +50,7 @@ for filename in glob.glob('*.md'):
     
     ofile.write(heading)
     ofile.write('<div id="post_name"><a href="' + nfilename + '">' + title + '</a></div>')
-    ofile.write('<div id="post_date">' + date.strftime('%B %-d, %Y') + '</div>')
+    ofile.write('<div id="post_date">' + date.strftime('%B %d, %Y') + '</div>')
     ofile.write('<br><div id="generated">')
     ofile.write(md.render(data))
     ofile.write('</div></div></body></html>')
@@ -64,7 +66,7 @@ hfile.write(heading)
 for (date, title, filename) in posts:
 
     hfile.write('<div id="post_name"><a href="' + filename + '">' + title + '</a></div>')
-    hfile.write('<div id="post_date">' + date.strftime('%B %-d, %Y') + '</div>')
+    hfile.write('<div id="post_date">' + date.strftime('%B %d, %Y') + '</div>')
 
 hfile.write('</div></body>')
 hfile.write('</html>')

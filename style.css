@@ -61,4 +61,12 @@ p {
 hr {
     float: left;
     width: 13%;
-  }
+}
+#blog_name::after {
+    content:attr(data-after);
+    display: block;
+    font-size: 20px;
+    margin-bottom: 5px;
+    font-style: italic;
+}
+#blog_name{border-bottom: 2px solid; display: inline-block}
